@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { CustomButtonProps } from "@/types";
 
-const CustomButton = ({title , containerStyles , btnType , handleClick } : CustomButtonProps) => {
+const CustomButton = ({title , rightIcon , containerStyles , textStyles , btnType , handleClick } : CustomButtonProps) => {
   return (
     <button
       disabled={false}
@@ -11,7 +11,8 @@ const CustomButton = ({title , containerStyles , btnType , handleClick } : Custo
       onClick={handleClick}
       className={`custom-btn ${containerStyles}`}
     >
-      <span className="flex-1">{title}</span>
+      <span className={`flex-1 ${textStyles}`}>{title}</span>
+      {rightIcon && <Image src={rightIcon} alt="icon" width={30} height={30}/>}
     </button>
   );
 };
