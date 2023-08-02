@@ -6,7 +6,7 @@ export interface CustomButtonProps {
     textStyles ?: string ;
     rightIcon ?: string; 
     btnType ?: "button" | "reset" ;
-    handleClick : MouseEventHandler<HTMLButtonElement>;
+    handleClick ?: MouseEventHandler<HTMLButtonElement>;
 }
 
 export interface SearchManufacturerProps{
